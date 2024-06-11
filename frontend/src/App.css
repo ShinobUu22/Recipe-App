@@ -1,0 +1,285 @@
+#root{
+ font-family: monospace;
+}
+
+.container-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgb(0,0,0,0.7);
+}
+.model{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    box-shadow: 0 4px 8px rgb(0,0,0,0.1);
+}
+.model-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.model-content{
+    background-color: white;
+    padding: 2em;
+    border-radius: 4px;
+    max-width: 500px;
+}
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+  }
+  
+  .container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Form styling */
+  form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button.btn-primary {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  button.btn-outline-secondary {
+    background-color: transparent;
+    color: #6c757d;
+    border: 1px solid #6c757d;
+  }
+  
+  /* Recipe card styling */
+  .recipe-card {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .recipe-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .recipe-title {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .recipe-summary {
+    color: #6c757d;
+  }
+  
+  /* View more button */
+  .view-more {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: 20px;
+  }
+  
+  /* Recipe modal styling */
+  .recipe-model {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .recipe-model-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    max-width: 500px;
+    width: 90%;
+  }
+  
+  .recipe-model-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #6c757d;
+  }
+  
+  .recipe-model-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-model-summary {
+    color: #6c757d;
+  }
+  
+/* Container for the recipe card */
+.image-cont {
+  
+    margin-left: 35px;
+    width: 400px;
+    height: 30%;
+    padding: 10px 10px;
+    align-items: center;
+    cursor: pointer;
+    
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+   
+}
+table{
+    border: 1px solid #000;
+}
+
+.image-cont:hover {
+    transform: scale(1.02);
+}
+
+/* Styling for the recipe card */
+.recipie-card {
+    display: flex;
+   
+    
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .recipie-card img {
+    width: 100%;
+    height: auto;
+    float: left;
+    border-bottom: 1px solid #ced4da;
+  }
+  
+  .recipe-card-title {
+    padding: 15px;
+    text-align: center;
+    justify-content: space-around;
+    float: left;
+  }
+  
+  .recipe-card-title h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+  }
+  .btn-close{
+    width: 5%;
+    height: 5%;
+    padding-left: 10px;
+    float: right;
+  }
+  label {
+    /* Presentation */
+    font-size: 48px
+  }
+  
+  /* Required Styling */
+  
+  label input[type="checkbox"] {
+    display: none;
+  }
+  
+  .custom-checkbox {
+    margin-left: 2em;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .custom-checkbox .glyphicon {
+    color: gold;
+    position: absolute;
+    top: 0.4em;
+    left: -1.25em;
+    font-size: 0.75em;
+  }
+  
+  .custom-checkbox .glyphicon-star-empty {
+    color: gray;
+  }
+  
+  .custom-checkbox .glyphicon-star {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .custom-checkbox:hover .glyphicon-star{
+    opacity: 0.5;
+  }
+  
+  .custom-checkbox input[type="checkbox"]:checked ~ .glyphicon-star {
+    opacity: 1;
+  }
+  .tabs{
+    display: flex;
+    gap: 2em;
+    cursor: pointer;
+    
+  }
+
+.recipe-card-title{
+  display: flex;
+  align-items: center;
+  gap: .5em;
+}
+
+.tab-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.tab-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #000;  /* Or any color you prefer */
+  border-radius: 2px;
+}
