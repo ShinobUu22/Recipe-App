@@ -16,7 +16,8 @@ app.use(cors(
     {
         origin:["https://recipe-app-frontend-sage.vercel.app"],
         methods:["POST","GET","DELETE"],
-        credentials:true
+        credentials:true,
+        mode: 'no-cors'
     }
 ));
 
