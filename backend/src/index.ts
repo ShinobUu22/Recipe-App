@@ -23,7 +23,7 @@ app.use(cors(
 // Connect to MongoDB
 
 
-mongoose.connect('mongodb+srv://Saphin:P4982oykvI2jUOMz@recipe-app.z72yosw.mongodb.net/recipe-app?retryWrites=true&w=majority&appName=Recipe-app');
+mongoose.connect('mongodb://localhost:27017/recipe-app');
 
 app.get("/api/recipes/search", async (req, res) => {
     const searchTerm = req.query.searchTerm as string;
