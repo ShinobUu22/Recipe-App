@@ -14,7 +14,7 @@ export const searchRecipes = async (searchTerm:string, page:number) => {
 }
 
 export const getRecipeSummary=async (recipeId:string)=>{
-    const url = new URL(`http://recipe-app-api-drab.vercel.app/api/recipes/${recipeId}/summary`)
+    const url = new URL(`https://recipe-app-api-drab.vercel.app/api/recipes/${recipeId}/summary`)
     const response = await fetch(url)
     if(!response.ok){
         throw new Error(`HTTP err! Status: ${response.status}`)
@@ -23,7 +23,7 @@ export const getRecipeSummary=async (recipeId:string)=>{
 }
 
 export const getFavourites=async ()=>{
-    const url =new URL(`http://recipe-app-api-drab.vercel.app/api/recipes/favourite`)
+    const url =new URL(`https://recipe-app-api-drab.vercel.app/api/recipes/favourite`)
     const response = await fetch(url)
     if(!response.ok){
         throw new Error(`Http err! Status: ${response.status}`);
@@ -33,7 +33,7 @@ export const getFavourites=async ()=>{
 }
 
 export const addFav=async(recipe:Recipe)=>{
-    const url = new URL(`http://recipe-app-api-drab.vercel.app/api/recipes/favourite`)
+    const url = new URL(`https://recipe-app-api-drab.vercel.app/api/recipes/favourite`)
     const body = {
         recipeId:recipe.id
     }
@@ -52,7 +52,7 @@ export const addFav=async(recipe:Recipe)=>{
    
 }
 export const delFav=async(recipe:Recipe)=>{
-    const url = new URL(`http://recipe-app-api-drab.vercel.app/api/recipes/favourite`)
+    const url = new URL(`https://recipe-app-api-drab.vercel.app/api/recipes/favourite`)
     const body = {
         recipeId:recipe.id
     }
