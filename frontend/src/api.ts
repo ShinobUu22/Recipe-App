@@ -2,7 +2,7 @@ import { Recipe } from "./types"
 
 
 export const searchRecipes = async (searchTerm:string, page:number) => {
-    const baseUrl = new URL("http://recipe-app-api-drab.vercel.app/api/recipes/search")
+    const baseUrl = new URL("https://recipe-app-api-drab.vercel.app/api/recipes/search")
     baseUrl.searchParams.append("searchTerm",searchTerm)
     baseUrl.searchParams.append("page",String(page))
 
