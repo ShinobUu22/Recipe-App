@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(cors(
     {
-        origin:["https://recipe-app-frontend-sage.vercel.app/"],
+        origin:["https://recipe-app-frontend-sage.vercel.app"],
         methods:["POST","GET","DELETE"],
         credentials:true
     }
