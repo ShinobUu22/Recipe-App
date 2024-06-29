@@ -12,7 +12,14 @@ const FavouriteRecipe = mongoose.model('FavouriteRecipe', favouriteRecipeSchema)
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    {
+        origin:["https://recipe-app-frontend-sage.vercel.app","https://recipe-app-api-drab.vercel.app"],
+        methods:["POST","GET","DELETE"],
+        credentials:true,
+     
+    }
+));
 
 // Connect to MongoDB
 
